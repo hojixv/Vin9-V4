@@ -1,0 +1,410 @@
+--// Newgui
+--// Full streamable options
+--// Reworked EVERTHING
+--// New features
+--// Bypass anti cheats
+--// Fake Dahood Support
+--// Perhaps Solara Support (Maybe)
+--// V4, current version = v2, v3
+--// Fps optimized 
+--// Silent Bypass
+--// Fully protected, safe
+--// Rage Bypass
+
+hojixv.settings = https://raw.githubusercontent.com/hojixv/dahood/new/projects
+
+Picker = {
+    ["Use Gui"] = false,--// gui or not
+    ["No Gui"] = false,--// gui or not
+    ["Kill Switch"] true, --// dont touch
+    ["Version"] "V4" --// dont touch
+    ["Panic"] "K" --// dont touch
+    ["KillProcess"] = false, --//
+},
+    
+hojixv = {
+    Silent = {
+        ["Enabled"] = true, --// on or off
+        ["Prediction"] = 0.129, --// prediction 
+        ["Part"] = "HumanoidRootPart", --// part  "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg",  "LeftUpperLeg", "RightLowerLeg", "RightFoot",  "RightUpperLeg"
+	      ["Airshot"] = "true", --// airshot if off do "false"
+        ["AirShotHitpart"] = "Humanoidrootpart", --// airshot part
+        ["Usehitchance"] = false, --// use hitchance
+        ["Hitchance"] = "100", --// hitchance "500"
+        ["UseToggleKey"] = true,  --// untoggle key
+        ["ToggleKey"] = "p", --// key
+        ["No Recoil"] = false, --// no recoil
+        ["Show"] = false, --// show? silent 
+        ["Movement"] = ReleaseMouse, --// Movement
+        ["Resolver"] = false, -- resolver on or off (will make silent worst)
+        ["Snaplines"] = false, --// snaplines
+        ["Visulize"] = false, --// visulize where player is going
+        ["ScaleFactors"] = "0.2", --// scarefactors
+        ["AutoPrediction"] = true, --// auto pred
+        ["Detection"] "Close", --// fov dtc
+        ["AntiAimViewer"] false, --// anti aim view   
+        ["Tracer Transparency"] = 1, --// trace 
+        ["Tracer Color"] = 1, --// trace color
+        ["AntiCurve"] = false, --// anticurve
+
+
+                                            
+        Circle = {
+            ["Visible"] = true, --// fov
+            ["Filled"] = false, --// filled fov
+            ["Radius"] = 50, --// radius on script
+            ["Transparency"] = 0.4, --// transparency
+            ["Color"] = Color3.fromRGB(255,255,255), --// Fov color
+            ["Both"] = false, --// Fov
+            ["Dotted"] = false, --// dotted fov
+            ["Fov Type"] = 1, --// 1, 2 , 3
+            ["Torso"] = false, --// fov torso
+            
+        },
+    },
+},
+
+GunSpecific = {
+    ["Enabled"] = true,
+    ["Detection"] = "Close = 10, Mid = 20, Far = FoV", --// detction fov
+Pistols =  "Close = 10, Mid = 20, Far = FoV", --// pistol Fov
+    ["FOV"] = "Close = 100, Mid = 100, Far = 100", --// fov
+    ["Prediction"] = "Close = 0.124, Mid = 0.123, Far = 0.123", --// pistols Pred
+
+Shotguns = {
+    ["FOV"] = "Close = 10, Mid = 10, Far = 10", --// Fov sg
+    ["Prediction"] = "Close = 0.125, Mid = 0.125, Far = 0.125", --// shotguns
+    },
+Automatics = {
+    ["FOV"] = "Close = 10, Mid = 10, Far = 10 ", --// fov
+    ["Prediction"] = "Close = 0.125, Mid = 0.125, Far = 0.125", --// ak, aug
+    },
+Gun.Random = {
+        ["FOV"] = "Close = 10, Mid = 10, Far = 10", --// all guns
+        ["Prediction"] = "Close = 0.15, Mid = 0.125, Far = 0.125", --// all for pred
+    }
+}
+
+    Camlock = {
+        ["Enabled"] = true, --// on or off "false, true"
+        ["Keybind"] = "c", --// keybind
+        ["Type"] = "Camlock", --// mouse, camlock
+        ["Activate"] = "Toggle", --// Hold, toggle
+        ["Prediction"] = 0.138, --// pred
+        ["Part"] = "HumanoidRootPart", --// part "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg",  "LeftUpperLeg", "RightLowerLeg", "RightFoot",  "RightUpperLeg"
+    },
+        ["Build"] = "Dahood", --// build  (really doesnt matter just for the game ur playing)
+        ["UseSmoothing"] = true, --// use smo0thing
+        ["SmoothingAmount"] = 1, --// amount
+        ["EasingStyle"] = Enum.EasingStyle.Elastic, --// dont touch
+        ["EasingDirection"] = Enum.EasingDirection.InOut, --// dont touch
+        ["Use Fov Radius"] = true,  --// use fov?
+        ["Camera Type"] = robotic, --// camera type
+        ["Tracer"] = false, --// tracer
+        ["AutoPrediction"] = true, --// auto pred
+        ["Sensitivity"] = 0.1, --// sensitivity 
+        ["AirPrediction"] = 0.2, --/ pred when jump
+        ["AirSmoothing"] = 0.2, --// smooth when jump
+        ["AirPart"] = "Humanoidrootpart" --// airpart 
+        ["UnlockOnTargetDeath"] = false, --// UnlockOnTargetDeath
+        ["UnlockOnOwnDeath"] = false, --// UnlockOnOwnDeath
+
+        Circle = {
+            ["Visible"] = false, --// visible
+            ["Filled"] = false, --// filled
+            ["Radius"] = 25, --// radius
+            ["Transparency"] = 0.4, --// tranparency
+            ["Thickness"] = 1, --// thickness
+            ["Color"] = Color3.fromRGB(255,255,255), --// color of fov
+            ["Dotted"] = false, --// dotted fov
+            ["Fov Type"] = 1, --// 1, 2 , 3
+            ["Transparency"] = 1, --// fov trans     
+        },
+
+
+    Trigger bot = {
+        ["Triggerbot"] = {
+            ["Enabled"]  = false, --// trigger on or not
+            ["Activate"] = "Hold", --// "mouse, hold, release" had to be uppercase
+            ["Keybind"]  = "MouseR", --// keybind
+            ["Reload"]   = true, --// reload on or off
+            ["KeyBind"] = "B" --// turn off and on
+            ["Delay"]    = 0.07, --// delay 
+            ["FoV"] = 40, --// fov
+            ["Prediction"] = "0.125", --// pred
+            ["Disable_When_Gun_Out"] = false, --// use 100% useful
+            ["Disable_When_Knife_Out"] = false, --// use 100% useful
+            ["Disable_Out_FoV"] = false, --// disables out fov
+            ["Cool Down"] = 0.01, --// cooldown
+    },
+},
+
+Auto Buy = {
+        ["Enabled"]  = false, --// on or not
+        ["Minimum Medium Armor"]  = 60, --// distance
+        ["Minimum High Armor"]  = 60, --// distance
+        ["Minimum Fire Armor"]  = 60, --// distance
+        ["HighMediumArmor"]  = 60, --// distance
+        ["Revolver"]  = 60, --// distance
+        ["Double-Barrel SG"]  = 60, --// distance
+        ["TacticalShotgun"]  = 60, --// distance
+        ["Distance"]  = "60 Meters", --// distance for buy (glitchy but should work)
+    },
+
+Spin = {
+        ["Enabled"] = false,
+        ["KeyBind"] = "x",
+        ["Speed"] = 90,
+}
+
+Inventory ={
+        ["Enabled"] = true, --// inv on or off
+        ["KeyBind"] = "p", --// keybind
+        ["duration"] = nil, --// nigger
+
+        Assortment = {
+            ["1"] = [Double-Barrel SG] --// sortment
+            ["2"] = [Revolver] --// sortment
+            ["3"] = [TacticalShotgun] --// sortment
+            ["4"] = [knife] --// sortment
+            ["5"] = [] --// sortment
+        },
+    },
+{.
+
+
+
+    HitParts = {
+        ["type"] = "NearestPoint", --// Closet, NearestPoint
+        ["HitParts"] = --// Input parts
+    }
+},
+
+
+HitBox = {
+    ["Expand"] = true, --// big hitbox
+    ["Delay"] = false, --// false
+},
+
+{,
+    Checks = {
+        ["Notifications"] = true, --// notis 
+        ["Duration"] = 1, --// durations
+
+        ["UnlockOnTargetDeath"] = true, --// UnlockOnTargetDeath
+        ["UnlockOnOwnDeath"] = true, --// UnlockOwnTargetDeath
+        ["AirCheck"] = false, --// air check
+
+        ["FriendCheck"] = false, --// friendcheck
+        ["KoCheck"] = false, --// kocheck
+        ["GrabbedCheck"] = false, --// grabbedcheck
+        ["CrewCheck"] = false, --// crewcheck
+        ["Id check"] = false, --// id checker
+    
+    },
+},
+
+    Id Check = {
+        [""]
+        [""]
+        [""]
+        [""]
+        [""]
+        [""]
+        [""]
+        [""]
+        [""]
+        [""]
+    }
+
+Anti aim = {
+    ["Enabled"] = true, --// true, false
+    ["toggle"] = true, --// true, false 
+    ["KeyBind"] = "n", --// keybind
+},
+
+HitBox Destroyer = {
+    ["Enabled"] = true, --// true, false
+    ["KeyBind"] = "n", --// keybind
+    ["Fps Reduce"] = nil, --// dont touch
+},
+
+
+Anti lock = {
+    ["Enabled"] = false, --// on or off
+    ["Keybind"] = "v", --// keybind antilock
+    ["Network desync"] = nil, --// true, false
+    ["Underground"] = nil, --// true, false
+    ["Sky aa"] = nil, --// true, false
+    ["Desync"] = nil, --// true, false
+    ["Spin"] = nil, --// spin
+    ["Range"] = nil, --// range axis (ass)
+    ["Axis"] = nil, --//  axis
+    
+},
+
+{,
+    "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg",  "LeftUpperLeg", "RightLowerLeg", "RightFoot",  "RightUpperLeg"
+},
+
+
+Targets = {
+    ["Keybind"] = "c", --// key
+    ["Show"] = false, --// show
+    ["Color"] = "Vin9 logo", --// change to a Rbg
+},
+
+
+Misc = {
+    MemorySpoofer = {
+        ["Percent"] = 100 --// %
+    },
+    ["SpeedThreshold"] = 50, --// speedthreshhold 
+    Macro = {
+        ["Enabled"]    = true, --// enabled or not
+        ["MacroKey"]   = "x", --// key
+        ["MacroSpeed"] = 1.75, --// speed
+        ["MacroType"]   = "mouse", --// "thirdPerson" Or "firstPerson" has to be like that
+        ["MacroToggle"] = "hold" --// press or hold
+    Misc2 = {
+        ["AntiSlowWalk"] = false, --// no slow walk
+        ["AutoStomp"]  = false, --// auto stomp
+        ["Infinite"]  = false, --// inf jump
+        ["AntiKill"] = false, --// basically flings u when ur low health (dont use)
+        ["Stomp Aura"] = false, --// aura
+    }
+    Fly = {
+        ["Enabled"] = false, --// on or off
+        ["Keybind"] = "nil", --// choose keybind
+        ["Duration"] = 1000, --// keep
+        ["Speed"] = 100, --// speed of fly stay from (100-500)
+    },
+    },
+},
+
+Target = {
+    ["Enabled"] = false, --// on or off
+    ["Keybind"] = "n", --// keybind
+    ["Prediction"] = 0.138, --// pred
+    ["Part"] = "HumanoidRootPart", 
+    ["Part"] = "", --// slot for multple parts
+
+    ["Spectate"] = false, --// spectate
+    ["LookAt"] = false, --// look at
+
+    ["Resolver"] = false, --// antilock resolver
+    ["ResolverTune"] = 0.138, --// tuning, tunes resolver
+    ["ResolverType"] = "math", --// multi, multply, raw
+
+    ["TargetStrafe"] = false, --// target strafe
+    ["StrafeRadius"] = 10, --// strafe radius
+    ["StrafeSpeed"] = 10, --// strafe speed
+    ["StrafeHeight"] = 4, --// strafe height
+    ["Visualize"] = false, --// visualize player
+    ["Notify"] = false, --// notify
+    ["AutoPrediction"] = false, --// auto pred
+    ["Movement"] = true, --// auto move
+    ["Notify"] = true, --// notis
+    ["360"] = true, --// 360 movement
+    ["Visualize Height"] = true, --// height
+    ["Visualize Speed"] = true, --// speed
+    ["Visualize Radius"] = true, --// radius
+    ["Vin9"] = true, --// vis
+
+    Drawings = { 
+        ["Tracer"] = false, --// draws tracer
+        ["TracerColor"] = Color3.fromRGB(255,255,255), --// draws tracer
+        ["Color"] = Color3.fromRGB(255,255,255), --// color
+        ["Thickness"] = 1, --// thickness of tracer
+        ["Transparency"] = 1, --// transparency
+        ["Dotted"] = false, --// dot fov
+    },
+},
+
+{,
+Sound = {
+    ["Enabled"] = false, --// on or off
+    ["Sound On Hit"] = "Neon", --// "neon, Steel, rose, sponge,"
+    ["Chams"] = "true", --// chams
+    ["Human"] = "Type", --// human chams
+    ["Color"] = false, --// cham color
+    ["LookAt"] = false, --// look at chams
+    ["SelfChams"] = false, --// self chams
+    ["Type"] = "Plastic", --// type
+    },
+},
+
+
+Esp = {
+    ["Enabled"] = true, --// on or off
+    ["Box"] --// on or off
+    ["Skeleton"] = true, --// on or off
+    ["Distance"] = true, --// on or off
+    ["Health"] = true, --// on or off
+    ["Fps Optimized"] = true, --// big change
+    ["Chams"] = true, --// on or off
+    ["Filled"] = true, --// filled box
+    ["Slider1"] = true, --// Colors
+    ["Slider2"] = true, --// Colors
+    ["Slider3"] = true, --// Colors
+},
+
+Sky Colors = { 
+    ["Fog"] = false, --// must use gui
+    ["Color"] = Color3.fromRGB(255,255,255), --// color
+    ["Thickness"] = 1, --// thickness of fog
+    ["Texture"] = 1, --// 1, 2, 3, 4, 5 
+    ["Slider1"] = true, --// Colors
+    ["Slider2"] = true, --// Colors
+    ["Slider3"] = true, --// Colors
+},
+
+Indicators= { 
+    ["Enabled"] = false, --// Indicators
+    ["Target Indicator"] = false, --// Indicators
+    ["Target Health"] = false, --// Indicators
+    ["Target Distance"] = false, --// Indicators
+    ["Target Username"] = false, --// Indicators
+    ["Target Low"] = false, --// Indicators
+    ["Target Full"] = false, --// Indicators
+    ["Target Prediction"] = false, --// Indicators
+    
+},
+
+Crosshair = {
+    ["Enabled"] = false, --// on or off
+    ["Spin"] = false, --// spin ?
+    ["Speed"] = 1, --// 1, 2, 3, 4, 5
+    ["Lenth"] = 1, --/ 1, 2, 3, 4, 5
+
+},
+KillBot = {
+    ["Enabled"] = false, --// on or off
+    ["Keybind"] = "l", --// keybind
+    ["Prediction"] = 0.138, --// pred
+    ["Part"] = "HumanoidRootPart", --// part
+    ["Loop>Player"]  = false, --// LOOP kills
+    ["AutoStomp"]  = false, --// auto stomp
+    ["ColorHit"]  = false, --// colorhit
+    ["HitNotify"]  = false, --// hitnotfy
+    ["HitNotifyLocation"]  = "Top Left", --// location where notis go
+
+},
+    {,
+{,
+
+Raid = {
+    ["Enabled"] = false,
+    ["RaidPlayers"] = false,
+    ["Radius"] = false,
+    ["Snipe"] = false,
+
+},
+        Rizz Talk = {
+            ["Enabled"] = false, --// rizzzzz
+            ["Not Sexual"] --// rizzzz
+            ["Sexual"] = false, --// may cause ban
+            ["Anal"] = false, --// rizzz
+        },
+    },
+},
