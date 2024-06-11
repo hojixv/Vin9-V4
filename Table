@@ -11,30 +11,32 @@
 --// Fully protected, safe
 --// Rage Bypass
 
+
 hojixv.settings = https://raw.githubusercontent.com/hojixv/dahood/new/projects
 
 Picker = {
     ["Use Gui"] = false,--// gui or not
     ["No Gui"] = false,--// gui or not
-    ["Kill Switch"] true, --// dont touch
-    ["Version"] "V4" --// dont touch
+    ["Kill Switch"] true, --// Remote Kill Switches (Means when Dahood Updates The script will Shutdown)
+    ["Version"] "V4" --// V1, V2, v3, V4
     ["Panic"] "K" --// dont touch
-    ["KillProcess"] = false, --//
+    ["Legacy"] = true, --// legacy mode (default or legacy)
 },
     
 hojixv = {
     Silent = {
-        ["Enabled"] = true, --// on or off
+        ["Enabled"] = false, --// on or off
         ["Prediction"] = 0.129, --// prediction 
         ["Part"] = "HumanoidRootPart", --// part  "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg",  "LeftUpperLeg", "RightLowerLeg", "RightFoot",  "RightUpperLeg"
 	["Airshot"] = true, --// airshot if off do "false"
         ["AirShotHitpart"] = "Humanoidrootpart", --// airshot part
         ["Usehitchance"] = false, --// use hitchance
+        ["Use V4"] = false, --// uses v4 module
         ["Hitchance"] = "100", --// hitchance "500"
         ["UseToggleKey"] = true,  --// untoggle key
         ["ToggleKey"] = "p", --// key
         ["No Recoil"] = false, --// no recoil
-        ["Show"] = false, --// show? silent 
+        ["Show"] = false, --// show? silent (visulizes)
         ["Movement"] = ReleaseMouse, --// Movement
         ["Resolver"] = false, -- resolver on or off (will make silent worst)
         ["Snaplines"] = false, --// snaplines
@@ -46,8 +48,8 @@ hojixv = {
         ["Tracer Transparency"] = 1, --// trace 
         ["Tracer Color"] = 1, --// trace color
         ["AntiCurve"] = false, --// anticurve
-
-
+        ["DottedTracer"] = false, --// dot tracer
+        ["Nearest"] = false, --// all hit parts
                                             
         Circle = {
             ["Visible"] = true, --// fov
@@ -59,6 +61,7 @@ hojixv = {
             ["Dotted"] = false, --// dotted fov
             ["Fov Type"] = 1, --// 1, 2 , 3
             ["Torso"] = false, --// fov torso
+            ["Head Prediction"] = false, --// pred visuals
             
         },
     },
@@ -101,6 +104,7 @@ Gun.Random = {
         ["Use Fov Radius"] = true,  --// use fov?
         ["Camera Type"] = robotic, --// camera type
         ["Tracer"] = false, --// tracer
+        ["DottedTracer"] = false, --// dot tracer
         ["AutoPrediction"] = true, --// auto pred
         ["Sensitivity"] = 0.1, --// sensitivity 
         ["AirPrediction"] = 0.2, --/ pred when jump
@@ -170,7 +174,7 @@ Inventory ={
             ["5"] = [] --// sortment
         },
     },
-{.
+{,
 
 
 
@@ -221,6 +225,7 @@ Anti aim = {
     ["Enabled"] = true, --// true, false
     ["toggle"] = true, --// true, false 
     ["KeyBind"] = "n", --// keybind
+    ["Detroy Game"] = false,    
 },
 
 HitBox Destroyer = {
@@ -272,7 +277,7 @@ Misc = {
         ["Infinite"]  = false, --// inf jump
         ["AntiKill"] = false, --// basically flings u when ur low health (dont use)
         ["Stomp Aura"] = false, --// aura
-    }
+    },
     Fly = {
         ["Enabled"] = false, --// on or off
         ["Keybind"] = "nil", --// choose keybind
@@ -318,6 +323,7 @@ Target = {
         ["Thickness"] = 1, --// thickness of tracer
         ["Transparency"] = 1, --// transparency
         ["Dotted"] = false, --// dot fov
+        ["DottedTracer"] = false, --// dot tracer
     },
 },
 
@@ -343,6 +349,7 @@ Esp = {
     ["Health"] = true, --// on or off
     ["Fps Optimized"] = true, --// big change
     ["Chams"] = true, --// on or off
+    ["Head Prediction"] = false, --// visual head
     ["Filled"] = true, --// filled box
     ["Slider1"] = true, --// Colors
     ["Slider2"] = true, --// Colors
@@ -376,7 +383,7 @@ Crosshair = {
     ["Spin"] = false, --// spin ?
     ["Speed"] = 1, --// 1, 2, 3, 4, 5
     ["Lenth"] = 1, --/ 1, 2, 3, 4, 5
-
+    ["Color"] = Color3.fromRGB(255,255,255), --// color of crosshair
 },
 KillBot = {
     ["Enabled"] = false, --// on or off
@@ -400,6 +407,9 @@ Raid = {
     ["Snipe"] = false,
 
 },
+    Shit Talk = {
+        ["Enabled"] = false, --// Vin9 shit talk
+},  
         Rizz Talk = {
             ["Enabled"] = false, --// rizzzzz
             ["Not Sexual"] --// rizzzz
